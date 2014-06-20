@@ -12,7 +12,7 @@
         <div id="wrap">
             <div id="header">
                 <div id="header-links">
-                    <p><a href="http://www.free-css.com/">Home</a> | <a href="http://www.free-css.com/">Contact</a> | <a href="Register.aspx">Register</a> </p>
+                    <p><a href="http://www.free-css.com/">Home</a> | <a href="http://www.free-css.com/">Login</a> | <a href="Register.aspx">Register</a> </p>
                 </div>
             </div>
             <div id="header-photo">
