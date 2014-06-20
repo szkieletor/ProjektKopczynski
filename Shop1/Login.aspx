@@ -29,7 +29,7 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time." />
+                                <asp:CheckBox ID="RememberMe" runat="server" Text="Zapami&#281;taj" />
                             </td>
                         </tr>
                         <tr>
