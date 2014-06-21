@@ -10,51 +10,42 @@
 namespace Shop1 {
     
     
-    public partial class AdminPanel {
+    public partial class WebForm1 {
         
         /// <summary>
-        /// Label1 control.
+        /// DropDownListUzytkownicy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListUzytkownicy;
         
         /// <summary>
-        /// DropDownListRemoveCategory control.
+        /// TextBoxHasloAdmin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownListRemoveCategory;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxHasloAdmin;
         
         /// <summary>
-        /// ButtonRemoveCategory control.
+        /// RadioButtonListOpcje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonRemoveCategory;
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonListOpcje;
         
         /// <summary>
-        /// TextBoxAddCategory control.
+        /// ButtonPotwierdz control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxAddCategory;
-        
-        /// <summary>
-        /// ButtonAddCategory control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonAddCategory;
+        protected global::System.Web.UI.WebControls.Button ButtonPotwierdz;
     }
 }

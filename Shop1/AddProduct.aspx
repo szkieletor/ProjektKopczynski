@@ -15,16 +15,24 @@
 
             <asp:Label ID="LabelName" runat="server" Text="Nazwa produktu"></asp:Label>
 
-            <br />
+            :<br />
             <asp:TextBox ID="TextBoxName" runat="server"></asp:TextBox>
+            <br />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBoxName" ErrorMessage="Pole Nazwa jest wymagane!"></asp:RequiredFieldValidator>
+            <br />
+            <br />
+            Ilość:<br />
+            <asp:TextBox ID="TextBoxCount" runat="server"></asp:TextBox>
+            <br />
+            <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="TextBoxCount" ErrorMessage="Nie podano poprawnie ilości!" Operator="GreaterThan" Type="Integer" ValueToCompare="-1"></asp:CompareValidator>
             <br />
             <br />
 
             <asp:Label ID="LabelPrice" runat="server" Text="Cena"></asp:Label>
-            <br />
+            :<br />
             <asp:TextBox ID="TextBoxPrice" runat="server"></asp:TextBox>
-            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="TextBoxPrice" ErrorMessage="CompareValidator" Operator="DataTypeCheck" Type="Integer">Pole Has&#322;o musi by&#263; liczb&#261;</asp:CompareValidator>
+            <br />
+            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="TextBoxPrice" ErrorMessage="CompareValidator" Operator="DataTypeCheck" Type="Integer">Pole Hasło musi być liczbą!</asp:CompareValidator>
             <br />
             <asp:Label ID="Label4" runat="server" Text="Kategoria"></asp:Label>
             <br />
@@ -50,7 +58,10 @@
     <asp:Label ID="Label3" runat="server" Text="Opis produktu"></asp:Label>
     <asp:TextBox ID="TextBoxDescription" runat="server" TextMode="MultiLine" Height="357px" Rows="50" Width="437px"></asp:TextBox>
     <br />
+        Hasło administratora:<br />
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
     <br />
+        <br />
     <asp:Button ID="ButtonAccept" runat="server" Text="Akceptuj" OnClick="ButtonAccept_Click" />
     <br />
     <br />
