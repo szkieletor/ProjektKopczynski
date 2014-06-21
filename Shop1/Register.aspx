@@ -12,6 +12,7 @@
     <p>
                       <asp:TextBox ID="TextBoxPassword" runat="server" TextMode="Password"></asp:TextBox>
                       <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBoxPassword" ErrorMessage="Pole Has&#322;o jest wymagane!"></asp:RequiredFieldValidator>
+                      &nbsp;<asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBoxPassword" ErrorMessage="RegularExpressionValidator" ValidationExpression="[0-9*]+[a-zA-Z&#261;&#263;&#281;&#322;&#324;ó&#347;&#378;&#380;&#260;&#262;&#280;&#321;&#323;Ó&#346;&#377;&#379;*]+|[a-zA-Z&#261;&#263;&#281;&#322;&#324;ó&#347;&#378;&#380;&#260;&#262;&#280;&#321;&#323;Ó&#346;&#377;&#379;*]+[0-9]"></asp:RegularExpressionValidator>
                       </p>
           <p><asp:Label ID="LabelRepeatPassword" runat="server" Text="Powtórz has&#322;o:"></asp:Label></p>
     <p>
@@ -22,6 +23,7 @@
     <p>
                       <asp:TextBox ID="TextBoxEmail" runat="server" TextMode="Email"></asp:TextBox>
                       <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBoxEmail" ErrorMessage="Pole E-mail jest wymagane!"></asp:RequiredFieldValidator>
+                      <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBoxEmail" ErrorMessage="RegularExpressionValidator" ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"></asp:RegularExpressionValidator>
                       </p>
                   <p>
                   <asp:Label ID="LabelName" runat="server" Text="Imie"></asp:Label>:</p>

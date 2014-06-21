@@ -34,5 +34,7 @@ namespace Shop1
         {
             args.IsValid = CheckBoxAccept.Checked;
         }
+
+        
     }
 }
