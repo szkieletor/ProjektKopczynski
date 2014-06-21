@@ -69,6 +69,7 @@
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.Master" />
+    <Content Include="APusers.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -78,7 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddProduct.aspx" />
-    <Content Include="AdminPanel.aspx" />
+    <Content Include="APproducts.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\button.jpg" />
     <Content Include="images\content-wrap.jpg" />
@@ -111,12 +112,12 @@
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminPanel.aspx.cs">
-      <DependentUpon>AdminPanel.aspx</DependentUpon>
+    <Compile Include="APproducts.aspx.cs">
+      <DependentUpon>APproducts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminPanel.aspx.designer.cs">
-      <DependentUpon>AdminPanel.aspx</DependentUpon>
+    <Compile Include="APproducts.aspx.designer.cs">
+      <DependentUpon>APproducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -179,6 +180,13 @@
     </Compile>
     <Compile Include="Settings.aspx.designer.cs">
       <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="APusers.aspx.cs">
+      <DependentUpon>APusers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="APusers.aspx.designer.cs">
+      <DependentUpon>APusers.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
