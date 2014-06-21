@@ -1,6 +1,5 @@
 namespace Shop1.Migrations
 {
-    using Shop1.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -27,11 +26,6 @@ namespace Shop1.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-            context.Categories.AddOrUpdate(
-                new ProductCategory { Name = "ASDF" },
-                new ProductCategory { Name = "Test2" }
-                
-                );
         }
     }
 }

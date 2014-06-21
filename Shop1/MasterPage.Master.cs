@@ -119,5 +119,10 @@ namespace Shop1
                 }
             }
         }
+
+        protected void ButtonSearch_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Search.aspx?search=" + TextBoxSearch.Text);
+        }
     }
 }

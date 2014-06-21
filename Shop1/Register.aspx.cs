@@ -23,7 +23,7 @@ namespace Shop1
             user.Password = TextBoxLogin.Text;
             user.Email = TextBoxEmail.Text;
             user.Name = TextBoxName.Text;
-            user.Nazwisko = TextBoxLastName.Text;
+            user.LastName = TextBoxLastName.Text;
             user.City = TextBoxCity.Text;
             user.Address = TextBoxCity.Text;
             context.Users.Add(user);

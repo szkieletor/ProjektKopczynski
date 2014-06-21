@@ -61,11 +61,11 @@
                 <div id="sidebar">
                     <h1>Wyszukaj</h1>
                     <p>
-                        <input name="search_query" class="textbox" type="text" /><br />
+                        <asp:TextBox ID="TextBoxSearch" runat="server"></asp:TextBox>
                         <br />
-                        <input name="search" class="button" value="Zatwierdź" type="submit" />
-
-                    </p>
+                        <br />
+                        <asp:Button ID="ButtonSearch" runat="server" OnClick="ButtonSearch_Click" Text="Wyszukaj" Width="120px" />
+&nbsp;</p>
                     <h1>Dzia&#322;y</h1>
                     <ul class="sidemenu">
                         <asp:Repeater ID="Repeater1" runat="server">

@@ -69,7 +69,6 @@
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.Master" />
-    <Content Include="APusers.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -79,7 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddProduct.aspx" />
-    <Content Include="APproducts.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\button.jpg" />
     <Content Include="images\content-wrap.jpg" />
@@ -94,6 +92,7 @@
     <Content Include="ProductDetails.aspx" />
     <Content Include="ProductList.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="Search.aspx" />
     <Content Include="Settings.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -112,13 +111,6 @@
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="APproducts.aspx.cs">
-      <DependentUpon>APproducts.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="APproducts.aspx.designer.cs">
-      <DependentUpon>APproducts.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,6 +118,11 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201406211724033_addedLastNAme.cs" />
+    <Compile Include="Migrations\201406211724033_addedLastNAme.Designer.cs">
+      <DependentUpon>201406211724033_addedLastNAme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DatabaseInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -174,6 +171,13 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Settings.aspx.cs">
       <DependentUpon>Settings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -181,18 +185,14 @@
     <Compile Include="Settings.aspx.designer.cs">
       <DependentUpon>Settings.aspx</DependentUpon>
     </Compile>
-    <Compile Include="APusers.aspx.cs">
-      <DependentUpon>APusers.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="APusers.aspx.designer.cs">
-      <DependentUpon>APusers.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201406031604588_init.resx">
       <DependentUpon>201406031604588_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406211724033_addedLastNAme.resx">
+      <DependentUpon>201406211724033_addedLastNAme.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

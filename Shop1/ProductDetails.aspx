@@ -1,7 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="ProductDetails.aspx.cs" Inherits="Shop1.ProductDetails" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="defaultContent" runat="server">
             <a name="DodawanieProduktu"></a>
-                <h1>Dodaj nowy produkt</h1>
+                <h1>
+
+            <asp:Label ID="LabelName" runat="server" Text="Nazwa produktu"></asp:Label>
+
+            </h1>
 
         <div id="sidebar">
             
@@ -14,12 +18,12 @@
 
         <div id="rightcolumn">
 
-            <asp:Label ID="LabelName" runat="server" Text="Nazwa produktu"></asp:Label>
-
-            <br />
-            <br />
-
             <asp:Label ID="LabelPrice" runat="server" Text="Cena"></asp:Label>
+
+            <br />
+            <br />
+
+            <asp:Button ID="Button1" runat="server" Height="31px" Text="Dodaj do koszyka" Width="109px" />
             <br />
             <br />
             <br />
