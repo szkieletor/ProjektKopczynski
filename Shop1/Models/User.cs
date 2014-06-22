@@ -14,6 +14,8 @@ namespace Shop1.Models
         public string Password { get; set; }
         public string City { get; set; }
         public string Address { get; set; }
-       
+        public bool IsAdmin { get; set; }
+
+        public virtual History History { get; set; }
     }
 }
