@@ -11,6 +11,10 @@ namespace Shop1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Cart c = (Cart) Session["cart"];
+            if (c != null) {
+                DataList1.DataSource = c.Products;
+            }
 
         }
     }

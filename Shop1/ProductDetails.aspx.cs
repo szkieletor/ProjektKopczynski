@@ -34,11 +34,29 @@ namespace Shop1
             {
                 if (Session["cart"] != null) {
                     Cart cart = (Cart) Session["cart"];
-                    ProductCount pc = new ProductCount();
-                    pc.Product = currentProduct;
-                    pc.Count = 1;
-                    cart.Products.Add(pc);
-                    Session["cart"] = cart;
+
+                    ProductCount existing = new ProductCount();
+                    foreach (ProductCount pc in cart.Products) {
+                        if  (pc.Product.ProductID == currentProduct.ProductID) {
+                        existing = pc;
+                        }
+                    }
+
+                    if (existing != null)
+                    {
+                        cart.Products.Remove(existing);
+                        existing.Count++;
+                        cart.Products.Add(existing);
+                    }
+                    else
+                    {
+                        ProductCount pc = new ProductCount();
+                        pc.Product = currentProduct;
+                        pc.Count = 1;
+                        cart.Products.Add(pc);
+                        Session["cart"] = cart;
+                    }
+
                 }
                 else
                 {

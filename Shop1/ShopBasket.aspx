@@ -19,8 +19,12 @@
     </p>
     <p>
         Twoje produkty w koszyku:</p>
-    <asp:BulletedList ID="BulletedList1" runat="server" Height="20px" Width="370px">
-    </asp:BulletedList>
+    <asp:DataList ID="DataList1" runat="server">
+        <ItemTemplate>
+            
+        </ItemTemplate>
+    </asp:DataList>
+    <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Button ID="ButtonPrzejdz" runat="server" Text="Przejd&#378; do p&#322;atno&#347;ci" />
 </asp:Content>

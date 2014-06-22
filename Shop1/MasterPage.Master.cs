@@ -59,17 +59,17 @@ namespace Shop1
                     categories = query.ToList();
                     Repeater1.DataSource = categories;
                     Repeater1.DataBind();
-
+                    if (Request.Cookies["userName"] != null)
+                    {
+                        TextBoxLogin.Text = Request.Cookies["userName"].Value;
+                        if (Request.Cookies["password"] != null)
+                        {
+                            TextBoxPassword.Text = Request.Cookies["password"].Value;
+                        }
+                    }
                     
                 }
-                if (Request.Cookies["userName"] != null)
-                {
-                    TextBoxLogin.Text = Request.Cookies["userName"].Value;
-                    if (Request.Cookies["password"] != null)
-                    {
-                        TextBoxPassword.Text = Request.Cookies["password"].Value;
-                    }
-                }
+
             
         }
 
