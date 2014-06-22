@@ -34,6 +34,7 @@
                                     <asp:Button ID="ButtonSetting" runat="server" Text="Ustawienia konta" OnClick="ButtonSetting_Click" />
                                     <asp:Button ID="ButtonLogout" runat="server" Text="Wyloguj" OnClick="ButtonLogout_Click" />
                                     <asp:Button ID="ButtonAdminPanel" runat="server" Text="Panel administratora" OnClick="ButtonAdminPanel_Click" />
+
                                 </asp:Panel>
 
                             </ContentTemplate>
