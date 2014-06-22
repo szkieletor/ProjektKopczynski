@@ -3,10 +3,6 @@
      <h1>Panel Administracyjny - Produkty i kategorie</h1> 
       <p><span style="font-size: medium">Edycja kategorii:</span><br />
           <br />
-          Has&#322;o administratora:<br />
-          <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-          <br />
-          <br />
           Dodaj kategorie:<br />
 <asp:TextBox ID="TextBoxAddCategory" runat="server"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;

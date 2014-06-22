@@ -16,6 +16,6 @@ namespace Shop1.Models
         public string Address { get; set; }
         public bool IsAdmin { get; set; }
 
-        public virtual History History { get; set; }
+        public virtual Order Orders { get; set; }
     }
 }

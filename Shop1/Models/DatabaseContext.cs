@@ -12,6 +12,6 @@ namespace Shop1.Models
         public DbSet<User> Users { get; set; }
         public DbSet<ProductCategory> Categories { get; set; }
         public DbSet<ProductCount> ProductCounts { get; set; }
-        public DbSet<History> Histories { get; set; }
+        public DbSet<Order> Histories { get; set; }
     }
 }

@@ -11,6 +11,6 @@ namespace Shop1.Models
         public Product product { get; set; }
         public int Count { get; set; }
 
-        public virtual History History { get; set; }
+        public virtual Order History { get; set; }
     }
 }
