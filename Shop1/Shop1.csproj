@@ -65,6 +65,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AdmProducts.aspx" />
+    <Content Include="AdmUsers.aspx" />
     <Content Include="App_Data\Shop1.Models.DatabaseContext.mdf" />
     <Content Include="Contact.aspx" />
     <Content Include="packages.config" />
@@ -94,6 +95,7 @@
     <Content Include="Register.aspx" />
     <Content Include="Search.aspx" />
     <Content Include="Settings.aspx" />
+    <Content Include="ShopBasket.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +119,13 @@
     </Compile>
     <Compile Include="AdmProducts.aspx.designer.cs">
       <DependentUpon>AdmProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdmUsers.aspx.cs">
+      <DependentUpon>AdmUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdmUsers.aspx.designer.cs">
+      <DependentUpon>AdmUsers.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -190,6 +199,13 @@
     </Compile>
     <Compile Include="Settings.aspx.designer.cs">
       <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShopBasket.aspx.cs">
+      <DependentUpon>ShopBasket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShopBasket.aspx.designer.cs">
+      <DependentUpon>ShopBasket.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
