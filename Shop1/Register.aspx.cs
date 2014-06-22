@@ -27,6 +27,7 @@ namespace Shop1
             user.City = TextBoxCity.Text;
             user.Address = TextBoxCity.Text;
             user.IsAdmin = false;
+            user.isBlocked = false;
             context.Users.Add(user);
             context.SaveChanges();
         }

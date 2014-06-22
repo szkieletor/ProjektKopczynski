@@ -5,6 +5,9 @@
         Wybierz u&#380;ytkownika:
         <br />
 &nbsp;<asp:DropDownList ID="DropDownListChooseUser" runat="server">
+    <asp:ListItem>
+        Test
+    </asp:ListItem>
 </asp:DropDownList>
 &nbsp;</p>
     <p>&nbsp;<br />
@@ -16,7 +19,7 @@
         </asp:RadioButtonList>
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<asp:Button ID="ButtonPotwierdz" runat="server" Text="Potwierdz" />
+<asp:Button ID="ButtonPotwierdz" runat="server" Text="Potwierdz" OnClick="ButtonPotwierdz_Click" />
     &nbsp;<br />
     </p>
 </asp:Content>
