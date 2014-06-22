@@ -19,7 +19,7 @@ namespace Shop1
                         select u;
             User user = query.ToList()[0];
             TextBoxAddress.Text = user.Address;
-            TextBoxEmail.Text = user.Email
+            TextBoxEmail.Text = user.Email;
         }
 
         protected void ButtonAccept_Click(object sender, EventArgs e)
