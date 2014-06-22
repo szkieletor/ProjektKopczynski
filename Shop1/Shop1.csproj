@@ -142,6 +142,10 @@
     <Compile Include="Migrations\201406221238288_addedOrderAndProductCount.Designer.cs">
       <DependentUpon>201406221238288_addedOrderAndProductCount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201406221600154_costam.cs" />
+    <Compile Include="Migrations\201406221600154_costam.Designer.cs">
+      <DependentUpon>201406221600154_costam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\DatabaseInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -218,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201406221238288_addedOrderAndProductCount.resx">
       <DependentUpon>201406221238288_addedOrderAndProductCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406221600154_costam.resx">
+      <DependentUpon>201406221600154_costam.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
