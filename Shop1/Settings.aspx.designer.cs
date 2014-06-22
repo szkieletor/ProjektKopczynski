@@ -22,15 +22,6 @@ namespace Shop1 {
         protected global::System.Web.UI.WebControls.TextBox TextBoxEmail;
         
         /// <summary>
-        /// TextBoxLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxLogin;
-        
-        /// <summary>
         /// TextBoxPassword control.
         /// </summary>
         /// <remarks>
@@ -85,22 +76,13 @@ namespace Shop1 {
         protected global::System.Web.UI.WebControls.TextBox TextBoxAddress;
         
         /// <summary>
-        /// TextBoxCode control.
+        /// TextBoxCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxCode;
-        
-        /// <summary>
-        /// TextBoxTelephone control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxTelephone;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxCity;
         
         /// <summary>
         /// ButtonAccept control.

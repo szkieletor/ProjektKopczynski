@@ -15,7 +15,7 @@ namespace Shop1.Models
         public string City { get; set; }
         public string Address { get; set; }
         public bool IsAdmin { get; set; }
-
+        public bool isBlocked { get; set; }
         public virtual Order Orders { get; set; }
     }
 }

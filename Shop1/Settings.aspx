@@ -5,10 +5,7 @@
     <p>
         Email:<br />
         <asp:TextBox ID="TextBoxEmail" runat="server"></asp:TextBox>
-    </p>
-    <p>
-        Login:<br />
-        <asp:TextBox ID="TextBoxLogin" runat="server"></asp:TextBox>
+        <br />
     </p>
     <p>
         Has&#322;o:<br />
@@ -37,12 +34,8 @@
         <asp:TextBox ID="TextBoxAddress" runat="server"></asp:TextBox>
     </p>
     <p>
-        Kod pocztowy<br />
-        <asp:TextBox ID="TextBoxCode" runat="server"></asp:TextBox>
-    </p>
-    <p>
-        Tel kom. :<br />
-        <asp:TextBox ID="TextBoxTelephone" runat="server"></asp:TextBox>
+        Miasto<br />
+        <asp:TextBox ID="TextBoxCity" runat="server"></asp:TextBox>
     </p>
 <p>
         <asp:Button ID="ButtonAccept" runat="server" OnClick="ButtonAccept_Click" Text="Potwierd&#378;" />
