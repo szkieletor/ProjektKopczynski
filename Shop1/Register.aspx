@@ -14,9 +14,9 @@
                       <br />
                       <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBoxPassword" ErrorMessage="Pole Has&#322;o jest wymagane!" ValidationGroup="RegisterGroup"></asp:RequiredFieldValidator>
                       &nbsp;<br />
-                      <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBoxPassword" ErrorMessage="Hasło musi składać się z conajmniej jednej litery i jednej cyfry!" ValidationExpression="[0-9*]+[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ*]+|[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ*]+[0-9] +" ValidationGroup="RegisterGroup"></asp:RegularExpressionValidator>
+                      <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBoxPassword" ErrorMessage="Has&#322;o musi sk&#322;ada&#263; si&#281; z conajmniej jednej litery i jednej cyfry!" ValidationExpression="[0-9*]+[a-zA-Z&#261;&#263;&#281;&#322;&#324;ó&#347;&#378;&#380;&#260;&#262;&#280;&#321;&#323;Ó&#346;&#377;&#379;*]+|[a-zA-Z&#261;&#263;&#281;&#322;&#324;ó&#347;&#378;&#380;&#260;&#262;&#280;&#321;&#323;Ó&#346;&#377;&#379;*]+[0-9]+" ValidationGroup="RegisterGroup"></asp:RegularExpressionValidator>
                       <br />
-                      <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextBoxPassword" ErrorMessage="Hasło powinno składać sie z conajmniej 8 znaków!" ValidationExpression="[0-9a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]{8,}" ValidationGroup="RegisterGroup"></asp:RegularExpressionValidator>
+                      <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextBoxPassword" ErrorMessage="Has&#322;o powinno sk&#322;ada&#263; sie z conajmniej 8 znaków!" ValidationExpression="[0-9a-zA-Z&#261;&#263;&#281;&#322;&#324;ó&#347;&#378;&#380;&#260;&#262;&#280;&#321;&#323;Ó&#346;&#377;&#379;]{8,}" ValidationGroup="RegisterGroup"></asp:RegularExpressionValidator>
                       </p>
           <p><asp:Label ID="LabelRepeatPassword" runat="server" Text="Powtórz has&#322;o:"></asp:Label></p>
     <p>
@@ -29,7 +29,7 @@
                       <br />
                       <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBoxEmail"  ErrorMessage="Pole E-mail jest wymagane!" ValidationGroup="RegisterGroup"></asp:RequiredFieldValidator>
                       <br />
-                      <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBoxEmail" ErrorMessage="Nieprawidłowy adres e-mail!" ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" ViewStateMode="Enabled"></asp:RegularExpressionValidator>
+                      <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBoxEmail" ErrorMessage="Nieprawid&#322;owy adres e-mail!" ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" ViewStateMode="Enabled"></asp:RegularExpressionValidator>
                       </p>
                   <p>
                   <asp:Label ID="LabelName" runat="server" Text="Imie"></asp:Label>:</p>
