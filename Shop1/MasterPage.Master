@@ -13,6 +13,7 @@
             <div id="header">
                 <div id="header-links">
                     <p>
+                                  <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                         <asp:UpdatePanel runat="server">
                             <ContentTemplate>
                                 <asp:Panel ID="PanelNotLogged" runat="server">
@@ -48,7 +49,7 @@
                 </div>
             </div>
             <div id="header-photo">
-                <h1 id="logo-text"><a href="/">Sklep internetowy
+                <h1 id="logo-text"><a href="/">Sklep internetowy</a></h1>
                 <h2 id="slogan">Slogan</h2>
             </div>
             <div id="nav">
@@ -115,7 +116,7 @@
                 <div id="footer">
                     Design by: <a href="http://www.styleshout.com/">styleshout</a> |
                     <asp:Label ID="LabelCounter" runat="server" Text="Liczba odwiedzin: "></asp:Label>
-                    </p>
+                    
                 </div>
             </div>
         </div>
