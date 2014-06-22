@@ -20,12 +20,13 @@ namespace Shop1
         protected void ButtonAccept_Click(object sender, EventArgs e)
         {
             User user = new User();
-            user.Password = TextBoxLogin.Text;
+            user.Login = TextBoxLogin.Text;
+            user.Password = TextBoxPassword.Text;
             user.Email = TextBoxEmail.Text;
             user.Name = TextBoxName.Text;
             user.LastName = TextBoxLastName.Text;
             user.City = TextBoxCity.Text;
-            user.Address = TextBoxCity.Text;
+            user.Address = TextBoxAddress.Text;
             user.IsAdmin = false;
             user.isBlocked = false;
             context.Users.Add(user);

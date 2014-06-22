@@ -23,7 +23,7 @@
             <br />
             <br />
 
-            <asp:Button ID="Button1" runat="server" Height="31px" Text="Dodaj do koszyka" Width="109px" />
+            <asp:Button ID="ButtonAddToCart" runat="server" Height="31px" Text="Dodaj do koszyka" Width="109px" OnClick="ButtonAddToCart_Click" />
             <br />
             <br />
             <br />

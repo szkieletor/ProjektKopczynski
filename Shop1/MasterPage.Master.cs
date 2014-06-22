@@ -41,14 +41,7 @@ namespace Shop1
             }
                 if (!IsPostBack)
                 {
-                    if (Request.Cookies["userName"] != null)
-                    {
-                        TextBoxLogin.Text = Request.Cookies["userName"].Value;
-                        if (Request.Cookies["password"] != null)
-                        {
-                            TextBoxPassword.Text = Request.Cookies["password"].Value;   
-                        }
-                    }
+
 
                     if (Application["counter"] == null)
                     {
@@ -69,7 +62,14 @@ namespace Shop1
 
                     
                 }
-
+                if (Request.Cookies["userName"] != null)
+                {
+                    TextBoxLogin.Text = Request.Cookies["userName"].Value;
+                    if (Request.Cookies["password"] != null)
+                    {
+                        TextBoxPassword.Text = Request.Cookies["password"].Value;
+                    }
+                }
             
         }
 
@@ -86,7 +86,7 @@ namespace Shop1
         protected void ButtonAccept_Click(object sender, EventArgs e)
         {
             var query = from user in context.Users
-                        where user.Name == TextBoxLogin.Text && user.Password == TextBoxPassword.Text
+                        where user.Login == TextBoxLogin.Text && user.Password == TextBoxPassword.Text
                         select user;
 
             if (query.ToList().Count == 1)
@@ -114,12 +114,12 @@ namespace Shop1
         {
             Session["userName"] = null;
             registered = false;
-            if (Response.Cookies["userName"] != null)
+            if (Request.Cookies["userName"] != null)
             {
-                TextBoxLogin.Text = Response.Cookies["userName"].Value;
-                if (Response.Cookies["password"] != null)
+                TextBoxLogin.Text = Request.Cookies["userName"].Value;
+                if (Request.Cookies["password"] != null)
                 {
-                    TextBoxPassword.Text = Response.Cookies["password"].Value;
+                    TextBoxPassword.Text = Request.Cookies["password"].Value;
                     PanelLogged.Visible = false;
                     PanelNotLogged.Visible = true;
                 }

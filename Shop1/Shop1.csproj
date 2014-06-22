@@ -127,6 +127,7 @@
     <Compile Include="AdmUsers.aspx.designer.cs">
       <DependentUpon>AdmUsers.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cart.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -145,6 +146,14 @@
     <Compile Include="Migrations\201406221600154_costam.cs" />
     <Compile Include="Migrations\201406221600154_costam.Designer.cs">
       <DependentUpon>201406221600154_costam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406221831043_costam1.cs" />
+    <Compile Include="Migrations\201406221831043_costam1.Designer.cs">
+      <DependentUpon>201406221831043_costam1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406221845406_asdf.cs" />
+    <Compile Include="Migrations\201406221845406_asdf.Designer.cs">
+      <DependentUpon>201406221845406_asdf.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\DatabaseInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -225,6 +234,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201406221600154_costam.resx">
       <DependentUpon>201406221600154_costam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406221831043_costam1.resx">
+      <DependentUpon>201406221831043_costam1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406221845406_asdf.resx">
+      <DependentUpon>201406221845406_asdf.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

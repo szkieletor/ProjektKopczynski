@@ -10,8 +10,11 @@ namespace Shop1.Models
     {
         public int OrderID { get; set; }
 
+        public string Date { get; set; }
+
         [Required]
         public virtual User User { get; set; }
+        
         
         public virtual List<ProductCount> ProductCounter { get; set; }
     }

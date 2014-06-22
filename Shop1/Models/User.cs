@@ -8,6 +8,7 @@ namespace Shop1.Models
     public class User
     {
         public int UserID { get; set; }
+        public string Login { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
@@ -16,6 +17,6 @@ namespace Shop1.Models
         public string Address { get; set; }
         public bool IsAdmin { get; set; }
         public bool isBlocked { get; set; }
-        public virtual Order Orders { get; set; }
+        public virtual List<Order> Orders { get; set; }
     }
 }
