@@ -12,6 +12,13 @@ namespace Shop1
     public partial class AddProduct : System.Web.UI.Page
     {
         DatabaseContext context = new DatabaseContext();
+        Product editedProduct;
+
+        public Product EditedProduct
+        {
+            get { return editedProduct; }
+            set { editedProduct = value; }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -20,7 +27,25 @@ namespace Shop1
                 DropDownListCategory.DataTextField = "Name";
                 DropDownListCategory.DataValueField = "ProductCategoryID";
                 DropDownListCategory.DataBind();
+                if (Request.QueryString["ProductID"] != null)
+                {
+                    int id = Convert.ToInt32(Request.QueryString["ProductID"]);
+
+                    var query = from p in context.Products
+                                where p.ProductID == id
+                                select p;
+
+                    if (query.ToList().Count == 1) {
+                        editedProduct = (Product)query.ToList()[0];
+                        TextBoxName.Text = editedProduct.Name;
+                        TextBoxPrice.Text = editedProduct.Price.ToString();
+                        TextBoxDescription.Text = editedProduct.Description;
+                    }
+
+                }
             }
+
+
 
 
         }
@@ -43,6 +68,10 @@ namespace Shop1
                         select cat;
             product.ProductCategory = query.ToList()[0];
             context.Products.Add(product);
+            if (EditedProduct != null)
+            {
+                context.Products.Remove(editedProduct);
+            }
             context.SaveChanges();
             Response.Redirect("ProductList.aspx?ProductCategoryID=" + product.ProductCategory.ProductCategoryID);
    

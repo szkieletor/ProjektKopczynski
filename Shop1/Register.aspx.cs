@@ -26,6 +26,7 @@ namespace Shop1
             user.LastName = TextBoxLastName.Text;
             user.City = TextBoxCity.Text;
             user.Address = TextBoxCity.Text;
+            user.IsAdmin = false;
             context.Users.Add(user);
             context.SaveChanges();
         }

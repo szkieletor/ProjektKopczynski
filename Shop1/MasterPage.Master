@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Shop1.MasterPage" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Shop1.MasterPage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -12,24 +12,28 @@
         <div id="wrap">
             <div id="header">
                 <div id="header-links">
-                    <p> 
-                        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                    <p>
                         <asp:UpdatePanel runat="server">
                             <ContentTemplate>
-                                                        <asp:Panel ID="PanelNotLogged" runat="server">
-                                                       Login: <asp:TextBox ID="TextBoxLogin" runat="server"></asp:TextBox>  <asp:TextBox ID="TextBoxPassword" runat="server" TextMode="Password"></asp:TextBox>  
-                        <asp:CheckBox ID="CheckBoxRemember" runat="server" Text="Zapami&#281;taj" />  
-                        <asp:Button ID="ButtonAccept" runat="server" Text="Accept" OnClick="ButtonAccept_Click" ValidationGroup="MasterPageLoginGroup"/>
-                        | <a href="Register.aspx">Register</a>
-                         <br/>   <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="TextBoxLogin" ValidationGroup="MasterPageLoginGroup">Pole login jest wymagane!</asp:RequiredFieldValidator>
-                        <br /><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="TextBoxPassword" ValidationGroup="MasterPageLoginGroup">Pole has&#322;o jest wymagane!</asp:RequiredFieldValidator>
-                        <asp:Label ID="LabelInvalid" runat="server" Text="Niepoprawne dane logowania!" Visible="false"></asp:Label>
-                    </asp:Panel>
-                        <asp:Panel ID="PanelLogged" runat="server">
-                        <asp:Label ID="labelLoggedIn" runat="server"></asp:Label>
-                            <asp:Button ID="ButtonLogout" runat="server" Text="Wyloguj" OnClick="ButtonLogout_Click"/>
-                           
-                        </asp:Panel>
+                                <asp:Panel ID="PanelNotLogged" runat="server">
+                                    Login:
+                                    <asp:TextBox ID="TextBoxLogin" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="TextBoxPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                    <asp:CheckBox ID="CheckBoxRemember" runat="server" Text="Zapami&#281;taj" />
+                                    <asp:Button ID="ButtonAccept" runat="server" Text="Accept" OnClick="ButtonAccept_Click" ValidationGroup="MasterPageLoginGroup" />
+                                    | <a href="Register.aspx">Register</a>
+                                    <br />
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="TextBoxLogin" ValidationGroup="MasterPageLoginGroup">Pole login jest wymagane!</asp:RequiredFieldValidator>
+                                    <br />
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="TextBoxPassword" ValidationGroup="MasterPageLoginGroup">Pole has&#322;o jest wymagane!</asp:RequiredFieldValidator>
+                                    <asp:Label ID="LabelInvalid" runat="server" Text="Niepoprawne dane logowania!" Visible="false"></asp:Label>
+                                </asp:Panel>
+                                <asp:Panel ID="PanelLogged" runat="server">
+                                    <asp:Label ID="labelLoggedIn" runat="server"></asp:Label>
+                                    <asp:Button ID="ButtonSetting" runat="server" Text="Ustawienia konta" OnClick="ButtonSetting_Click" />
+                                    <asp:Button ID="ButtonLogout" runat="server" Text="Wyloguj" OnClick="ButtonLogout_Click" />
+                                    <asp:Button ID="ButtonAdminPanel" runat="server" Text="Panel administratora" OnClick="ButtonAdminPanel_Click" />
+                                </asp:Panel>
 
                             </ContentTemplate>
 
@@ -65,7 +69,8 @@
                         <br />
                         <br />
                         <asp:Button ID="ButtonSearch" runat="server" OnClick="ButtonSearch_Click" Text="Wyszukaj" Width="120px" />
-&nbsp;</p>
+                        &nbsp;
+                    </p>
                     <h1>Dzia&#322;y</h1>
                     <ul class="sidemenu">
                         <asp:Repeater ID="Repeater1" runat="server">
@@ -108,7 +113,9 @@
             </div>
             <div id="footer-wrap">
                 <div id="footer">
-                     Design by: <a href="http://www.styleshout.com/">styleshout</a> | <asp:Label ID="LabelCounter" runat="server" Text="Liczba odwiedzin: "></asp:Label> </p>
+                    Design by: <a href="http://www.styleshout.com/">styleshout</a> |
+                    <asp:Label ID="LabelCounter" runat="server" Text="Liczba odwiedzin: "></asp:Label>
+                    </p>
                 </div>
             </div>
         </div>

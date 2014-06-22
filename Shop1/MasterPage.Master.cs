@@ -25,6 +25,13 @@ namespace Shop1
             {
                 PanelLogged.Visible = true;
                 PanelNotLogged.Visible = false;
+                int id = Convert.ToInt32(Session["userID"]);
+                var query = from u in context.Users
+                            where u.UserID == id
+                            select u;
+                User user = query.ToList()[0];
+                if (user.IsAdmin) ButtonAdminPanel.Visible = true;
+                else ButtonAdminPanel.Visible = false;
             }
             else
             {
@@ -39,8 +46,7 @@ namespace Shop1
                         TextBoxLogin.Text = Request.Cookies["userName"].Value;
                         if (Request.Cookies["password"] != null)
                         {
-                            TextBoxPassword.Text = Request.Cookies["password"].Value;
-                            
+                            TextBoxPassword.Text = Request.Cookies["password"].Value;   
                         }
                     }
 
@@ -93,7 +99,7 @@ namespace Shop1
                     Response.Cookies["password"].Expires = DateTime.Now.AddYears(1);
                 }
                 Session["userName"] = query.ToList()[0].Name;
-
+                Session["userID"] = query.ToArray()[0].UserID;
                 Response.Redirect("/About.aspx");
             }
             else
@@ -123,6 +129,16 @@ namespace Shop1
         protected void ButtonSearch_Click(object sender, EventArgs e)
         {
             Response.Redirect("Search.aspx?search=" + TextBoxSearch.Text);
+        }
+
+        protected void ButtonSetting_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Settings.aspx");
+        }
+
+        protected void ButtonAdminPanel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdmProducts.aspx");
         }
     }
 }
