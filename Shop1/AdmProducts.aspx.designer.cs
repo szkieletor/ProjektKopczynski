@@ -10,7 +10,7 @@
 namespace Shop1 {
     
     
-    public partial class AdminPanel {
+    public partial class AdmProducts {
         
         /// <summary>
         /// TextBox1 control.
