@@ -140,5 +140,10 @@ namespace Shop1
         {
             Response.Redirect("AdmProducts.aspx");
         }
+
+        protected void ButtonAdminPanel1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdmUsers.aspx");
+        }
     }
 }
