@@ -177,6 +177,7 @@
     <Compile Include="Models\ProductCategory.cs" />
     <Compile Include="Models\ProductCount.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="ProductAmount.cs" />
     <Compile Include="ProductDetails.aspx.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

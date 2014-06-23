@@ -25,6 +25,8 @@ namespace Shop1
             {
                 PanelLogged.Visible = true;
                 PanelNotLogged.Visible = false;
+                ButtonCart.Visible = true;
+                ButtonHistory.Visible = true;
                 int id = Convert.ToInt32(Session["userID"]);
                 var query = from u in context.Users
                             where u.UserID == id
@@ -144,6 +146,16 @@ namespace Shop1
         protected void ButtonAdminPanel1_Click(object sender, EventArgs e)
         {
             Response.Redirect("AdmUsers.aspx");
+        }
+
+        protected void ButtonCart_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ShopBasket.aspx");
+        }
+
+        protected void ButtonHistory_Click(object sender, EventArgs e)
+        {
+            //Do historii
         }
     }
 }

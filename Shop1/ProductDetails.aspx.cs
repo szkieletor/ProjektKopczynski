@@ -35,14 +35,14 @@ namespace Shop1
                 if (Session["cart"] != null) {
                     Cart cart = (Cart) Session["cart"];
 
-                    ProductCount existing = new ProductCount();
-                    foreach (ProductCount pc in cart.Products) {
-                        if  (pc.Product.ProductID == currentProduct.ProductID) {
-                        existing = pc;
+                    ProductAmount existing = new ProductAmount();
+                    foreach (ProductAmount pc in cart.Products) {
+                        if  (pc.Name == currentProduct.Name) {
+                        existing = pc; //Tutaj cos sie psuje JAk sie dodaje 2 produkt
                         }
                     }
 
-                    if (existing != null)
+                    if (existing.Count > 0)
                     {
                         cart.Products.Remove(existing);
                         existing.Count++;
@@ -50,8 +50,8 @@ namespace Shop1
                     }
                     else
                     {
-                        ProductCount pc = new ProductCount();
-                        pc.Product = currentProduct;
+                        ProductAmount pc = new ProductAmount();
+                        pc.Name = currentProduct.Name;
                         pc.Count = 1;
                         cart.Products.Add(pc);
                         Session["cart"] = cart;
@@ -61,8 +61,8 @@ namespace Shop1
                 else
                 {
                     Cart cart = new Cart();
-                    ProductCount pc = new ProductCount();
-                    pc.Product = currentProduct;
+                    ProductAmount pc = new ProductAmount();
+                    pc.Name = currentProduct.Name;
                     pc.Count = 1;
                     cart.Products.Add(pc);
                     Session["cart"] = cart;

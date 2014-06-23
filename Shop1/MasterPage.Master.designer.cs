@@ -130,6 +130,24 @@ namespace Shop1 {
         protected global::System.Web.UI.WebControls.Button ButtonSetting;
         
         /// <summary>
+        /// ButtonCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonCart;
+        
+        /// <summary>
+        /// ButtonHistory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonHistory;
+        
+        /// <summary>
         /// ButtonLogout control.
         /// </summary>
         /// <remarks>
