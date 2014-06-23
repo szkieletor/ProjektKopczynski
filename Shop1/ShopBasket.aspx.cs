@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -75,26 +77,72 @@ namespace Shop1
         {
             Cart c = (Cart)Session["cart"];
             Order order = new Order();
-
-            foreach (ProductAmount pa in c.Products)
+            string result = "Twoje zakupy: \n";
+            foreach (ProductAmount p in c.Products)
             {
-                ProductCount pc = new ProductCount();
-                Product product = new Product();
-                product.Name = pa.Name;
-                pc.Product = product;
-                pc.Count = pa.Count;
-
-                order.Add(pc);
-                order.Date = DateTime.Now.ToString() ;
-                User user = (User) Session["userName"];
-                var query = from User u in context.Users
-                            where u.Login == user.Login
-                            select u;
-
-                order.User = query.ToList()[0];
-                context.Histories.Add(order);
-                context.SaveChanges();
+                result += p.Name + " Ilość:" + p.Count + "\n";
             }
+            string x = Session["userName"].ToString();
+            var query = from User u in context.Users
+                        where u.Login == x
+                        select u;
+            User user = query.ToList()[0];
+            try
+            {
+                MailMessage msg = new MailMessage();
+                System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
+
+                msg.Subject = "Zamowienie";
+                msg.Body = result;
+                msg.From = new MailAddress("sklepdotnet100@gmail.com");
+                msg.To.Add(user.Email);
+                msg.IsBodyHtml = true;
+                client.Host = "smtp.gmail.com";
+                System.Net.NetworkCredential basicauthenticationinfo = new System.Net.NetworkCredential("sklepdotnet100@gmail.com", "sklep100");
+                client.Port = int.Parse("587");
+                client.EnableSsl = true;
+                client.UseDefaultCredentials = false;
+                client.Credentials = basicauthenticationinfo;
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                client.Send(msg);
+            }
+            catch (Exception ex)
+            {
+            }
+
+            try
+            {
+                MailMessage msg = new MailMessage();
+                System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
+                string text = "";
+
+                text = "Imie: " + user.Name + " Nazwisko:" + user.LastName + " Miasto:" + user.City + " Adres:" + user.Address;
+                text += " Produkty: ";
+                Cart c1 = (Cart)Session["cart"];
+                foreach (ProductAmount p in c1.Products)
+                {
+                    text += p.Name + " Ilość:" + p.Count + "\n";
+                }
+
+                msg.Subject = "Zamowienie";
+                msg.Body = result;
+                msg.From = new MailAddress("sklepdotnet100@gmail.com");
+                msg.To.Add("sklepdotnet100@gmail.com");
+                msg.IsBodyHtml = true;
+                client.Host = "smtp.gmail.com";
+                System.Net.NetworkCredential basicauthenticationinfo = new System.Net.NetworkCredential("sklepdotnet100@gmail.com", "sklep100");
+                client.Port = int.Parse("587");
+                client.EnableSsl = true;
+                client.UseDefaultCredentials = false;
+                client.Credentials = basicauthenticationinfo;
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                client.Send(msg);
+            }
+            catch (Exception ex)
+            {
+            }
+            Session["cart"] = null;
+
         }
     }
 }
