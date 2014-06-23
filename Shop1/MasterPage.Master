@@ -32,6 +32,8 @@
                                 <asp:Panel ID="PanelLogged" runat="server">
                                     <asp:Label ID="labelLoggedIn" runat="server"></asp:Label>
                                     <asp:Button ID="ButtonSetting" runat="server" Text="Ustawienia konta" OnClick="ButtonSetting_Click" />
+                                    <asp:Button ID="ButtonCart" runat="server" Text="Koszyk" OnClick="ButtonCart_Click" />
+                                    <asp:Button ID="ButtonHistory" runat="server" Text="Historia" OnClick="ButtonHistory_Click" />
                                     <asp:Button ID="ButtonLogout" runat="server" Text="Wyloguj" OnClick="ButtonLogout_Click" />
                                     <asp:Button ID="ButtonAdminPanel" runat="server" Text="Zarz&#261;dzaj produktami" OnClick="ButtonAdminPanel_Click" />
                                     <asp:Button ID="ButtonAdminPanel1" runat="server" Text="Zarz&#261;dzaj uzytkownikami" OnClick="ButtonAdminPanel1_Click" />
